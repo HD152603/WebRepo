@@ -1,0 +1,133 @@
+@CHARSET "EUC-KR";
+
+
+div.mainImage{
+	padding-top: 85px;
+	text-align: center;
+}
+
+div.title{
+	text-align: center;
+	font-size: 40px;
+	font-weight:bold; 
+  	padding-top: 50px;
+  	paddint-bottom : 25px;
+  	padding-bottom: 30px;
+  	
+  	color: black;
+	 }
+ 
+ .img{
+ 	float:middle;
+ 	width: 62%;
+ }
+ .second{
+ 	background-image:url(../image/secret2.jpg);
+ 	text-shadow: 0px 0px 10px #000000;
+	font-weight: 700;
+ 	background-size: 100%;
+ 	text-align: center;
+ 	padding-top:140px;
+ 	background-color: #A9DFA7;
+ 	padding-bottom :160px;
+ 	
+ 	color: rgba(255, 255, 255, 0.8);
+ 	padding-left: 60px;
+ 	font-size: 70px;
+ }
+#second2{
+	font-size: 30px;
+} 
+
+.intro{
+	text-align: center;
+ 	padding-top:70px;
+ 	font-size: 80px;
+ 	padding-bottom : 60px;
+ 	
+ 	color: white;
+ 	background-color: #F6E201;
+}
+.introimg{
+	width:20%;
+	border-radius: 50%;
+}
+#intro_text{
+	padding-top: 15px;
+	font-size: 45px;
+}
+
+.carousel{
+	
+	text-align: center;
+	padding-bottom:20px;
+}
+.carousel-item{
+	font-size: 25px;
+}
+
+ 	/*
+ 	¾µ »ö±ò
+ 	02EDE4
+ 	FB140C
+ 	*/
+
+
+.do{
+	width:100%;
+	background-image:url(../image/galaxy2.jpg);	
+ 	text-shadow: 0px 0px 10px #000000;
+	font-weight: 700;
+ 	text-align: center;
+ 	padding-top:140px;
+ 	background-color: #A9DFA7;
+ 	padding-bottom :140px;
+ 	background-size:cover;
+ 	color: rgba(255, 255, 255, 0.8);
+ 	padding-left: 60px;
+ 	font-size: 80px;
+}
+.docontent{
+	padding-top:100px;
+	padding-bottom: 20px;
+	text-align: center;
+	text-shadow: 0px 0px 10px #000000;
+	background-color: #A9DFA7;
+	
+	font-size: 50px;
+	color:white;
+}
+.doimg{
+	border-radius: 50%;
+	width: 300px;
+	margin-bottom: 15px;
+}
+#song{
+	background-image:url(../image/imagine.jpg);	
+}
+
+.so{
+	background-color: #DFA70A;
+}
+.tle{
+	margin: 100px;
+}
+.fa {
+    visibility: hidden;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 120px;
+
+	text-shadow: 0px 0px 10px #000000;
+	color:white;
+}
+
+.fadeIn{
+    -webkit-animation: animat_show 0.8s;
+    animation: animat_show 0.8s;
+    visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show{
+    0%{opacity:0
+ }
