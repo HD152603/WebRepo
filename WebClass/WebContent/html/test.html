@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+
+	var request = require('request');
+	var url = 'https://translate.google.com/translate_a/single?client=t&sl=en&tl=ko&hl=ko&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&otf=2&srcrom=0&ssel=0&tsel=0&kc=3&tk=839654.713657&q=how%20old%20are%20you';
+	 
+	request(url, function(err,httpResponse,body){ 
+	    if(!err){
+	        var string = (((body.split('[[[')[1]).split(']')[0]).split('\"')[1]).split('\"')[0];
+	        console.log(string);
+	    }
+	});
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>
