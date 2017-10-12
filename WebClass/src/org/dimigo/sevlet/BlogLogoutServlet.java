@@ -29,8 +29,8 @@ public class BlogLogoutServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher rd = request.getRequestDispatcher("jsp/blogmain.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
@@ -43,6 +43,7 @@ public class BlogLogoutServlet extends HttpServlet {
 		
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/blogmain.jsp");
 		rd.forward(request, response);
+//		response.sendRedirect("jsp/blogmain.jsp");
 	}
 
 }

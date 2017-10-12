@@ -49,9 +49,9 @@
     	UserVO user = (UserVO)session.getAttribute("user");
   		if(user == null) {
     %>
-    	<form class="form-inline my-2 my-lg-0" id="loginForm">
+    	<form class="form-inline my-2 my-lg-0" id="loginForm" method="post">
 	      <input class="form-control mr-sm-2" type="text" name="id" id="inputEmail" placeholder="ID" aria-label="ID" required id="id">
-	      <input class="form-control mr-sm-2" type="password" placeholder="PWD"  name="pwd" id="inputPassword" aria-label="PWD" required id="pwd">
+	      <input class="form-control mr-sm-2" type="password" placeholder="PWD" name="pwd" id="inputPassword" aria-label="PWD" required id="pwd">
 	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그인</button>
 		</form>
     <% 
@@ -78,7 +78,7 @@
     	<p>
     	<% if(user!=null) {
     	%>
-    	<%=user.getId()%>
+    	☆☆<%=user.getId().split("@")[0]%>☆☆
     	<% } %>
     	어서와요~  많이 기다렸다구요!</p>
 	</div>
@@ -252,15 +252,13 @@
 <script>
 $(function(){	
 	$('#loginForm').submit(function (event) {
-		// 자동으로 submit되는 것을 막기	
 		event.preventDefault();
 		
-		// id,pwd값 가져오기
-		//document.getElemntById("id").value;
 		var id = $('#inputEmail').val();
 		var pwd = $('#inputPassword').val();
-				
-		// 서버로 post 전송 (ajax)
+		
+		$('#inputPassword').val('');
+		
 		$.post("/WebClass/bloglogin", { 
 				"id": id, 
 				"pwd" : pwd,
